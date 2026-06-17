@@ -1,4 +1,4 @@
-# RHEL 10 Security Hardening -- Automated Setup Script
+# RHEL 9 Security Hardening -- Automated Setup Script
 
 An automated, defensive shell script designed to streamline security baseline provisioning on **Red Hat Enterprise Linux (RHEL) 10**. 
 
@@ -42,7 +42,7 @@ The script automates configuration across five major security vectors:
 
 ##  Prerequisites & Requirements
 
-* **Operating System**: RHEL 10 (Registered with an active subscription or configured with working software repositories).
+* **Operating System**: RHEL 9 (Registered with an active subscription or configured with working software repositories).
 * **Privileges**: Root execution via `sudo`.
 * **Network**: An active Internet connection during installation to fetch packages from DNF, EPEL, and GitHub.
 
@@ -53,7 +53,7 @@ The script automates configuration across five major security vectors:
 The script utilizes a design pattern where all configuration parameters are collected **interactively at runtime startup**. Once confirmed, the script processes all phases non-interactively.
 
 ### 1. Download and Prepare the Script
-Move the script onto your RHEL 10 target, name it `rhel10_security_setup.sh`, and mark it as executable:
+Move the script onto your RHEL 9 target, name it `rhel10_security_setup.sh`, and mark it as executable:
 ```bash
 chmod +x rhel10_security_setup.sh
 
@@ -97,10 +97,10 @@ ssh-copy-id -i ~/.ssh/id_ed25519_rhel10.pub -p <YOUR_CUSTOM_SSH_PORT> <user>@<se
 
 ### Step 2: Enroll Your User Account in TOTP MFA
 
-Log into your target RHEL 10 system, drop to the context of the regular user account authorized to connect via SSH, and run the authenticator initialization binary:
+Log into your target RHEL 9 system, drop to the context of the regular user account authorized to connect via SSH, and run the authenticator initialization binary:
 
 ```bash
-# On the RHEL 10 Server:
+# On the RHEL 9 Server:
 google-authenticator
 
 ```
@@ -169,7 +169,7 @@ tail -f /var/log/snort/alert_fast.txt
 
 ```
 
-***# RHEL 10  Hardening -- Automated Setup Script
+***# RHEL 9  Hardening -- Automated Setup Script
 
 An automated, defensive shell script designed to streamline  baseline provisioning on **Red Hat Enterprise Linux (RHEL) 10**. 
 
@@ -213,7 +213,7 @@ The script automates configuration across five major  vectors:
 
 ##  Prerequisites & Requirements
 
-* **Operating System**: RHEL 10 (Registered with an active subscription or configured with working software repositories).
+* **Operating System**: RHEL 9 (Registered with an active subscription or configured with working software repositories).
 * **Privileges**: Root execution via `sudo`.
 * **Network**: An active Internet connection during installation to fetch packages from DNF, EPEL, and GitHub.
 
@@ -224,7 +224,7 @@ The script automates configuration across five major  vectors:
 The script utilizes a design pattern where all configuration parameters are collected **interactively at runtime startup**. Once confirmed, the script processes all phases non-interactively.
 
 ### 1. Download and Prepare the Script
-Move the script onto your RHEL 10 target, name it `rhel10_security_setup.sh`, and mark it as executable:
+Move the script onto your RHEL 9 target, name it `rhel10_security_setup.sh`, and mark it as executable:
 ```bash
 chmod +x rhel10_security_setup.sh
 
@@ -268,10 +268,10 @@ ssh-copy-id -i ~/.ssh/id_ed25519_rhel10.pub -p <YOUR_CUSTOM_SSH_PORT> <user>@<se
 
 ### Step 2: Enroll Your User Account in TOTP MFA
 
-Log into your target RHEL 10 system, drop to the context of the regular user account authorized to connect via SSH, and run the authenticator initialization binary:
+Log into your target RHEL 9 system, drop to the context of the regular user account authorized to connect via SSH, and run the authenticator initialization binary:
 
 ```bash
-# On the RHEL 10 Server:
+# On the RHEL 9 Server:
 google-authenticator
 
 ```
