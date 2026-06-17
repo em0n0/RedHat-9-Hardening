@@ -224,9 +224,9 @@ The script automates configuration across five major  vectors:
 The script utilizes a design pattern where all configuration parameters are collected **interactively at runtime startup**. Once confirmed, the script processes all phases non-interactively.
 
 ### 1. Download and Prepare the Script
-Move the script onto your RHEL 10 target, name it `rhel10__setup.sh`, and mark it as executable:
+Move the script onto your RHEL 10 target, name it `rhel10_security_setup.sh`, and mark it as executable:
 ```bash
-chmod +x rhel10__setup.sh
+chmod +x rhel10_security_setup.sh
 
 ```
 
@@ -235,7 +235,7 @@ chmod +x rhel10__setup.sh
 Execute the script as root:
 
 ```bash
-sudo ./rhel10__setup.sh
+sudo ./rhel10_security_setup.sh
 
 ```
 
