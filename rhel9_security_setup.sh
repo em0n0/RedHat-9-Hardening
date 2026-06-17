@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ===================================================================================
-#  RHEL 10 Server Hardening & Script
+#  RHEL 9 Server Hardening & Script
 #  Order: Snort Install → OpenSSH → MFA → Firewall → Cowrie → Snort Rules → OpenSCAP
 # This script is intended for an isolated lab / test VM. It opens a honeypot
 # (Cowrie) and changes SSH, firewall and PAM configuration system-wide.
@@ -614,7 +614,7 @@ SNORT_CONF
 log "Writing Snort detection rules to /etc/snort/rules/local.rules..."
 cat > /etc/snort/rules/local.rules <<'RULES_EOF'
 # =============================================================================
-#  Snort Local Rules — RHEL 10 Hardening
+#  Snort Local Rules — RHEL 9 Hardening
 #  Categories:
 #    1. ICMP Traffic (Ping / Diagnostic)
 #    2. TCP Traffic (Web, SSH, Email)
@@ -776,7 +776,7 @@ SCAP_DATASTREAM=""
 OSCAP_REPORT_DIR="/var/log/oscap"
 mkdir -p "$OSCAP_REPORT_DIR"
 
-# ─── Locate RHEL 10 / RHEL 9 SCAP datastream ─────────────────────────────────
+# ─── Locate RHEL 9 / RHEL 9 SCAP datastream ─────────────────────────────────
 for ds in \
     "${SCAP_DIR}/ssg-rhel10-ds.xml" \
     "${SCAP_DIR}/ssg-rhel9-ds.xml" \
