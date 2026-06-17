@@ -199,7 +199,7 @@ cat > "${SSHD_CONF}" <<SSHD_EOF
 
 Port ${SSH_PORT}
 AddressFamily inet
-ListenAddress 0.0.0.0
+ListenAddress 0.0.0.0:${SSH_PORT}
 
 # ── Authentication ──────────────────────────────────────────
 PermitRootLogin no
@@ -565,7 +565,7 @@ alert tcp any any -> $HOME_NET 22 (
     flags:S;
     sid:1000020; rev:1;)
 
-alert tcp any any -> $HOME_NET 2233 (
+alert tcp any any -> $HOME_NET ${SSH_PORT} (
     msg:"TCP SSH Traffic on Custom Port (OpenSSH)";
     flags:S;
     sid:1000021; rev:1;)
