@@ -53,7 +53,7 @@ The script automates configuration across five major security vectors:
 The script utilizes a design pattern where all configuration parameters are collected **interactively at runtime startup**. Once confirmed, the script processes all phases non-interactively.
 
 ### 1. Download and Prepare the Script
-Move the script onto your RHEL 9 target, name it `rhel10_security_setup.sh`, and mark it as executable:
+Move the script onto your RHEL 9 target, name it `rhel9_security_setup.sh`, and mark it as executable:
 ```bash
 chmod +x rhel9_security_setup.sh
 
